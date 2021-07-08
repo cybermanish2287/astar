@@ -158,13 +158,12 @@ def make_grid(rows, width):
 
 	return grid
 
-
-def draw_grid(win, rows, width):
-	gap = width // rows
-	for i in range(rows):
-		pygame.draw.line(win, GREY, (0, i * gap), (width, i * gap))
-		for j in range(rows):
-			pygame.draw.line(win, GREY, (j * gap, 0), (j * gap, width))
+def draw_grid(win,rows,width):
+    gap = width//rows
+    for i in range(rows):
+        pygame.draw.line(win,GREY,(0,i*gap),(width,i*gap))
+    for i in range(rows):
+        pygame.draw.line(win,GREY,(i*gap,0),(i*gap,width))
 
 
 def draw(win, grid, rows, width):
